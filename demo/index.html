@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Forest Agent Dashboard demo</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="dashboard">
+      <header class="header">
+        <div>
+          <p class="eyebrow">WED, JUL 15 · SYNTHETIC DEMO</p>
+          <h1>FOREST AGENT DASHBOARD</h1>
+          <p class="lede">Notes, tasks and messages meet here. Find what matters now, then move into the day.</p>
+        </div>
+        <div class="header-side">
+          <time>09:42:18</time>
+          <div class="brand" aria-label="Original Forest T mark by Totoro">
+            <span class="canopy"></span><span class="trunk"></span>
+            <span class="rail"><i></i><i></i><i></i><i></i></span>
+            <small>BY TOTORO</small>
+          </div>
+        </div>
+      </header>
+
+      <label class="search"><span>⌕</span><input value="architecture" aria-label="Search notes"></label>
+
+      <section class="panel frequent">
+        <div class="section-heading"><div><h2>Frequent notes</h2><p>Ranked locally by recent opens.</p></div><span>LAST 7 DAYS</span></div>
+        <div class="note-grid">
+          <article><b>01</b><div><h3>学习—Spring Boot 与 FastAPI 对照</h3><p>Learning / Backend · 2h ago</p></div><strong>12<small>opens</small></strong></article>
+          <article><b>02</b><div><h3>复盘—API 限流与容灾设计</h3><p>Projects / Architecture · Yesterday</p></div><strong>8<small>opens</small></strong></article>
+          <article><b>03</b><div><h3>学习—Valkey 高可用与缓存策略</h3><p>Learning / Data systems · 3d ago</p></div><strong>7<small>opens</small></strong></article>
+          <article><b>04</b><div><h3>项目—本地优先知识工作台</h3><p>Projects / Product · 4d ago</p></div><strong>6<small>opens</small></strong></article>
+        </div>
+      </section>
+
+      <section class="panel mailroom">
+        <div class="section-heading"><div><h2>Mailroom</h2><p>A quiet, read-only view of what is waiting.</p></div><button>Mail settings</button></div>
+        <div class="mail-grid">
+          <article class="mail-card">
+            <div class="mail-title"><span class="monogram gmail">G</span><div><h3>Gmail</h3><p>demo account</p></div><b>3 UNREAD</b></div>
+            <div class="tabs"><button class="active">Unread</button><button>Recent</button><small>Updated now</small></div>
+            <div class="messages">
+              <div><span></span><p><b>Canopy CI</b><small>Build completed for the forest preview</small></p><time>8m</time></div>
+              <div><span></span><p><b>Sample Team</b><small>Architecture notes ready for review</small></p><time>2h</time></div>
+              <div><span></span><p><b>Forest Notes</b><small>Your weekly local-first digest</small></p><time>1d</time></div>
+            </div>
+            <footer><button class="primary">Refresh</button><button>Open inbox</button><button>Compose</button></footer>
+          </article>
+          <article class="mail-card">
+            <div class="mail-title"><span class="monogram qq">Q</span><div><h3>QQ Mail</h3><p>demo account</p></div><b>SYNCING</b></div>
+            <div class="tabs"><button class="active">Unread</button><button>Recent</button><small>Updated now</small></div>
+            <div class="loader" aria-label="Gathering QQ Mail signals"><span class="loader-rail"><i></i><i></i><i></i><i></i></span><p>Gathering unread QQ Mail signals…</p></div>
+            <footer><button class="primary">Syncing…</button><button>Open inbox</button></footer>
+          </article>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+

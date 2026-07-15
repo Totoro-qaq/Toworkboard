@@ -1,0 +1,9 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Setup and usage discussions
+    url: https://github.com/Totoro-qaq/forest-agent-dashboard/discussions
+    about: Ask non-sensitive questions and share synthetic examples.
+  - name: Private security report
+    url: https://github.com/Totoro-qaq/forest-agent-dashboard/security/advisories/new
+    about: Report vulnerabilities without exposing secrets publicly.
+

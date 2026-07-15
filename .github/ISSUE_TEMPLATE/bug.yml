@@ -1,0 +1,59 @@
+name: Bug report
+description: Report a reproducible problem without sharing private vault or mailbox data.
+title: "[Bug]: "
+labels: [bug, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping. Replace all personal content with synthetic examples before submitting.
+  - type: input
+    id: version
+    attributes:
+      label: Plugin version
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: obsidian
+    attributes:
+      label: Obsidian and operating system
+      placeholder: Obsidian 1.x, macOS 15
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Notes and search
+        - Frequent notes
+        - Tasks and vault activity
+        - Gmail
+        - QQ Mail
+        - GitHub radar
+        - Technology news
+        - Layout or accessibility
+        - Build or release
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Use a disposable vault and synthetic values.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual result
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: I removed tokens, authorization codes, addresses, real note titles, vault paths, and mailbox screenshots.
+          required: true
+

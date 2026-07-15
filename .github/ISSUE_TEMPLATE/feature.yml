@@ -1,0 +1,37 @@
+name: Feature proposal
+description: Propose a focused improvement that preserves the local-first model.
+title: "[Feature]: "
+labels: [enhancement, needs-triage]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user problem should the project solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed experience
+      description: Describe the smallest useful interaction.
+    validations:
+      required: true
+  - type: dropdown
+    id: network
+    attributes:
+      label: Does this require a new external service or permission?
+      options:
+        - No
+        - Yes
+        - Unsure
+    validations:
+      required: true
+  - type: textarea
+    id: privacy
+    attributes:
+      label: Privacy and security impact
+      description: Explain what leaves the vault, what is stored, and how consent works.
+    validations:
+      required: true
+
