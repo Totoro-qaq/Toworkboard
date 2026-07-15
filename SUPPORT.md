@@ -1,6 +1,6 @@
 # Support
 
-Forest Agent Dashboard is an early public preview maintained in spare time.
+Toworkboard is an early public preview maintained in spare time.
 
 - Use the bug form for a reproducible defect.
 - Use the feature form for a focused proposal.

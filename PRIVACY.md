@@ -1,6 +1,6 @@
 # Privacy
 
-Forest Agent Dashboard is local-first and contains no telemetry, analytics, advertising, or hosted account system.
+Toworkboard is local-first and contains no telemetry, analytics, advertising, or hosted account system.
 
 ## Data kept locally
 
@@ -44,5 +44,4 @@ Selecting a message opens the provider's web inbox. Compose opens the provider's
 - Remove individual credentials from plugin settings.
 - Clear frequent-note history and GitHub cache from plugin settings.
 - Disable and delete the plugin to remove its normal plugin data.
-- If legacy macOS Keychain entries remain, remove entries under `Obsidian Forest Agent Dashboard` using Keychain Access.
-
+- If macOS Keychain entries remain, remove entries under `Obsidian Toworkboard`. Older installations may also have entries under the legacy service name `Obsidian Forest Agent Dashboard`.

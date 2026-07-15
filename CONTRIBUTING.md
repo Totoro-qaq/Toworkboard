@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping make Forest Agent Dashboard calmer, safer, and more useful.
+Thanks for helping make Toworkboard calmer, safer, and more useful.
 
 ## Before opening a pull request
 

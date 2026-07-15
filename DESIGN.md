@@ -1,4 +1,4 @@
-# Forest Agent Dashboard design system
+# Toworkboard design system
 
 ## Direction
 
@@ -12,27 +12,27 @@ The **Canopy rail** is a thin vertical line connecting four small nodes: Notes, 
 
 ### Light
 
-- `--fad-canvas`: `#F3F5F3` — mist background
-- `--fad-surface`: `#FBFCFA` — primary reading surface
-- `--fad-ink`: `#17201A` — main text
-- `--fad-muted`: `#667069` — supporting text
-- `--fad-canopy`: `#183C2B` — primary action and mark
-- `--fad-fern`: `#4E7D5B` — success and active states
-- `--fad-rain`: `#7FA0A0` — secondary signal
-- `--fad-persimmon`: `#C66A3D` — warnings only
-- `--fad-line`: `#D6DDD6` — borders and dividers
+- `--twb-canvas`: `#F3F5F3` — mist background
+- `--twb-surface`: `#FBFCFA` — primary reading surface
+- `--twb-ink`: `#17201A` — main text
+- `--twb-muted`: `#667069` — supporting text
+- `--twb-canopy`: `#183C2B` — primary action and mark
+- `--twb-fern`: `#4E7D5B` — success and active states
+- `--twb-rain`: `#7FA0A0` — secondary signal
+- `--twb-persimmon`: `#C66A3D` — warnings only
+- `--twb-line`: `#D6DDD6` — borders and dividers
 
 ### Dark
 
-- `--fad-canvas`: `#111713`
-- `--fad-surface`: `#18211B`
-- `--fad-ink`: `#EEF3EF`
-- `--fad-muted`: `#A9B4AC`
-- `--fad-canopy`: `#B7D4BE`
-- `--fad-fern`: `#78A486`
-- `--fad-rain`: `#8FAFB1`
-- `--fad-persimmon`: `#E08A61`
-- `--fad-line`: `#344039`
+- `--twb-canvas`: `#111713`
+- `--twb-surface`: `#18211B`
+- `--twb-ink`: `#EEF3EF`
+- `--twb-muted`: `#A9B4AC`
+- `--twb-canopy`: `#B7D4BE`
+- `--twb-fern`: `#78A486`
+- `--twb-rain`: `#8FAFB1`
+- `--twb-persimmon`: `#E08A61`
+- `--twb-line`: `#344039`
 
 Do not use gradients. Color supports hierarchy; it does not decorate empty space.
 
@@ -55,7 +55,7 @@ Do not use gradients. Color supports hierarchy; it does not decorate empty space
 
 ### Header
 
-Product name, one-line purpose, date/time, and the original Forest T mark. A user-supplied mascot image may replace the mark locally, but no mascot asset ships with the plugin.
+Product name, one-line purpose, date/time, and the original Canopy T mark. A user-supplied mascot image may replace the mark locally, but no mascot asset ships with the plugin.
 
 ### Search
 
@@ -86,5 +86,5 @@ Use only short opacity/position transitions for state changes. Disable nonessent
 
 ## Brand and legal boundary
 
-The author identity is **Totoro**. The project name, Forest T mark, Canopy rail, screenshots, fixtures, and code are original. Do not bundle, trace, redraw, or imply endorsement by Studio Ghibli. A local custom-image setting is user-controlled and excluded from releases.
+The author identity is **Totoro**. The project name, Canopy T mark, Canopy rail, screenshots, fixtures, and code are original. Do not bundle, trace, redraw, or imply endorsement by Studio Ghibli. A local custom-image setting is user-controlled and excluded from releases.
 

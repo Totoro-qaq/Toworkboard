@@ -6,7 +6,7 @@ Only the latest published version receives security fixes during the preview per
 
 ## Reporting a vulnerability
 
-Do not post credentials or private vault data in a public issue. Use [GitHub private vulnerability reporting](https://github.com/Totoro-qaq/forest-agent-dashboard/security/advisories/new) for exploit details or sensitive evidence.
+Do not post credentials or private vault data in a public issue. Use [GitHub private vulnerability reporting](https://github.com/Totoro-qaq/toworkboard/security/advisories/new) for exploit details or sensitive evidence.
 
 Include the plugin version, Obsidian version, operating system, affected integration, and a sanitized reproduction. Replace addresses, tokens, message subjects, paths, and screenshots with synthetic values.
 

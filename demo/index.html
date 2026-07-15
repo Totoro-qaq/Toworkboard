@@ -3,62 +3,145 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Forest Agent Dashboard demo</title>
+    <title>Toworkboard product tour</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main class="dashboard">
-      <header class="header">
-        <div>
-          <p class="eyebrow">WED, JUL 15 · SYNTHETIC DEMO</p>
-          <h1>FOREST AGENT DASHBOARD</h1>
-          <p class="lede">Notes, tasks and messages meet here. Find what matters now, then move into the day.</p>
+    <main class="tour" aria-label="Toworkboard product tour">
+      <aside class="tour-rail" aria-label="Tour chapters">
+        <div class="brand-mark" aria-label="Original Canopy T mark by Totoro">
+          <span class="brand-canopy"></span>
+          <span class="brand-trunk"></span>
         </div>
-        <div class="header-side">
-          <time>09:42:18</time>
-          <div class="brand" aria-label="Original Forest T mark by Totoro">
-            <span class="canopy"></span><span class="trunk"></span>
-            <span class="rail"><i></i><i></i><i></i><i></i></span>
-            <small>BY TOTORO</small>
+        <ol class="chapters">
+          <li class="chapter is-active" data-chapter="overview">
+            <span>01</span><strong>Product</strong><small>产品</small>
+          </li>
+          <li class="chapter" data-chapter="search">
+            <span>02</span><strong>Search</strong><small>搜索</small>
+          </li>
+          <li class="chapter" data-chapter="integrations">
+            <span>03</span><strong>Signals</strong><small>集成</small>
+          </li>
+          <li class="chapter" data-chapter="install">
+            <span>04</span><strong>Install</strong><small>安装</small>
+          </li>
+        </ol>
+        <p class="byline">BY TOTORO</p>
+      </aside>
+
+      <section class="tour-main">
+        <header class="tour-header">
+          <div>
+            <p class="date-line">LOCAL-FIRST · SYNTHETIC DEMO</p>
+            <h1>Toworkboard</h1>
           </div>
-        </div>
-      </header>
+          <p class="privacy-state"><span></span> Your vault stays local</p>
+        </header>
 
-      <label class="search"><span>⌕</span><input value="architecture" aria-label="Search notes"></label>
-
-      <section class="panel frequent">
-        <div class="section-heading"><div><h2>Frequent notes</h2><p>Ranked locally by recent opens.</p></div><span>LAST 7 DAYS</span></div>
-        <div class="note-grid">
-          <article><b>01</b><div><h3>学习—Spring Boot 与 FastAPI 对照</h3><p>Learning / Backend · 2h ago</p></div><strong>12<small>opens</small></strong></article>
-          <article><b>02</b><div><h3>复盘—API 限流与容灾设计</h3><p>Projects / Architecture · Yesterday</p></div><strong>8<small>opens</small></strong></article>
-          <article><b>03</b><div><h3>学习—Valkey 高可用与缓存策略</h3><p>Learning / Data systems · 3d ago</p></div><strong>7<small>opens</small></strong></article>
-          <article><b>04</b><div><h3>项目—本地优先知识工作台</h3><p>Projects / Product · 4d ago</p></div><strong>6<small>opens</small></strong></article>
-        </div>
-      </section>
-
-      <section class="panel mailroom">
-        <div class="section-heading"><div><h2>Mailroom</h2><p>A quiet, read-only view of what is waiting.</p></div><button>Mail settings</button></div>
-        <div class="mail-grid">
-          <article class="mail-card">
-            <div class="mail-title"><span class="monogram gmail">G</span><div><h3>Gmail</h3><p>demo account</p></div><b>3 UNREAD</b></div>
-            <div class="tabs"><button class="active">Unread</button><button>Recent</button><small>Updated now</small></div>
-            <div class="messages">
-              <div><span></span><p><b>Canopy CI</b><small>Build completed for the forest preview</small></p><time>8m</time></div>
-              <div><span></span><p><b>Sample Team</b><small>Architecture notes ready for review</small></p><time>2h</time></div>
-              <div><span></span><p><b>Forest Notes</b><small>Your weekly local-first digest</small></p><time>1d</time></div>
+        <div class="stage">
+          <section class="scene scene-overview" data-scene="overview">
+            <div class="scene-copy">
+              <p class="scene-kicker">One calm workspace · 一处安静的工作台</p>
+              <h2>Notes, mail, tasks and engineering signals—without leaving Obsidian.</h2>
+              <p>Search what you wrote, return to important notes, and review optional read-only signals.</p>
             </div>
-            <footer><button class="primary">Refresh</button><button>Open inbox</button><button>Compose</button></footer>
-          </article>
-          <article class="mail-card">
-            <div class="mail-title"><span class="monogram qq">Q</span><div><h3>QQ Mail</h3><p>demo account</p></div><b>SYNCING</b></div>
-            <div class="tabs"><button class="active">Unread</button><button>Recent</button><small>Updated now</small></div>
-            <div class="loader" aria-label="Gathering QQ Mail signals"><span class="loader-rail"><i></i><i></i><i></i><i></i></span><p>Gathering unread QQ Mail signals…</p></div>
-            <footer><button class="primary">Syncing…</button><button>Open inbox</button></footer>
-          </article>
+            <div class="overview-shell">
+              <div class="search-preview"><span>⌕</span><p>Search titles and content…</p><kbd>⌘ K</kbd></div>
+              <div class="overview-grid">
+                <div class="notes-preview">
+                  <div class="mini-heading"><strong>Frequent notes</strong><small>LAST 7 DAYS</small></div>
+                  <article><b>01</b><div><h3>学习—Spring Boot 与 FastAPI 对照</h3><p>Learning / Backend · 2h ago</p></div><strong>12<small> opens</small></strong></article>
+                  <article><b>02</b><div><h3>复盘—API 限流与容灾设计</h3><p>Projects / Architecture · Yesterday</p></div><strong>8<small> opens</small></strong></article>
+                </div>
+                <div class="feature-index">
+                  <p><span>●</span> Full-text notes <small>全文笔记</small></p>
+                  <p><span>●</span> Read-only mail <small>只读邮箱</small></p>
+                  <p><span>●</span> Local tasks <small>本地任务</small></p>
+                  <p><span>●</span> GitHub & news <small>工程信号</small></p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="scene scene-search" data-scene="search" aria-hidden="true">
+            <div class="scene-topline">
+              <div><p class="scene-kicker">Search your vault · 搜索知识库</p><h2>Titles, paths, tags and Markdown content.</h2></div>
+              <p class="local-badge">LOCAL ONLY</p>
+            </div>
+            <div class="search-live"><span>⌕</span><p class="typed-query"></p><i></i><kbd>⌘ K</kbd></div>
+            <div class="result-list">
+              <article class="search-result"><div><strong>学习—Valkey 高可用与缓存策略</strong><small>Learning / Data systems</small></div><p>…通过 Sentinel、复制与故障转移设计<strong>高可用</strong>缓存层…</p></article>
+              <article class="search-result"><div><strong>复盘—API 限流与容灾设计</strong><small>Projects / Architecture</small></div><p>…限流、熔断、降级和跨区域<strong>容灾</strong>的工程取舍…</p></article>
+              <article class="search-result"><div><strong>学习—Spring Boot 与 FastAPI 对照</strong><small>Learning / Backend</small></div><p>…依赖注入、异步任务与<strong>服务治理</strong>能力对比…</p></article>
+            </div>
+          </section>
+
+          <section class="scene scene-integrations" data-scene="integrations" aria-hidden="true">
+            <div class="scene-topline">
+              <div><p class="scene-kicker">Optional signals · 可选集成</p><h2>One loading language, three independent sources.</h2></div>
+              <p class="read-only-badge">READ-ONLY MAIL</p>
+            </div>
+            <div class="integration-grid">
+              <article class="integration-panel">
+                <header><span class="source gmail-source">G</span><div><h3>Gmail</h3><p>Metadata only</p></div><b class="source-state">SYNCING</b></header>
+                <div class="signal-loader"><span class="loader-rail"><i></i><i></i><i></i><i></i></span><p>Gathering unread mail…</p></div>
+                <div class="loaded-list">
+                  <p><span></span><strong>Canopy CI</strong><small>Build completed · 8m</small></p>
+                  <p><span></span><strong>Sample Team</strong><small>Architecture notes · 2h</small></p>
+                </div>
+              </article>
+              <article class="integration-panel">
+                <header><span class="source github-source">⌘</span><div><h3>GitHub</h3><p>Public repository signals</p></div><b class="source-state">SYNCING</b></header>
+                <div class="signal-loader"><span class="loader-rail"><i></i><i></i><i></i><i></i></span><p>Checking starred projects…</p></div>
+                <div class="loaded-list">
+                  <p><span></span><strong>valkey-io / valkey</strong><small>In-memory data store</small></p>
+                  <p><span></span><strong>spring-projects / spring-ai</strong><small>AI engineering</small></p>
+                </div>
+              </article>
+              <article class="integration-panel wide">
+                <header><span class="source news-source">N</span><div><h3>Engineering news</h3><p>Public stories, no account required</p></div><b class="source-state">SYNCING</b></header>
+                <div class="signal-loader"><span class="loader-rail"><i></i><i></i><i></i><i></i></span><p>Reading the latest signals…</p></div>
+                <div class="loaded-list horizontal">
+                  <p><span></span><strong>Local-first software</strong><small>Designing for ownership</small></p>
+                  <p><span></span><strong>Reliable API systems</strong><small>Rate limits and recovery</small></p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="scene scene-install" data-scene="install" aria-hidden="true">
+            <div class="scene-topline">
+              <div><p class="scene-kicker">Install locally · 本地安装</p><h2>Build once. Copy three files. Enable in Obsidian.</h2></div>
+              <p class="time-badge">ABOUT 2 MIN</p>
+            </div>
+            <div class="install-layout">
+              <div class="terminal" aria-label="Installation commands">
+                <div class="terminal-bar"><i></i><i></i><i></i><span>toworkboard</span></div>
+                <p class="terminal-line"><b>$</b> git clone https://github.com/Totoro-qaq/toworkboard.git</p>
+                <p class="terminal-line"><b>$</b> cd toworkboard</p>
+                <p class="terminal-line"><b>$</b> npm ci && npm run build</p>
+                <p class="terminal-success">✓ Build complete · privacy checks passed</p>
+              </div>
+              <ol class="install-steps">
+                <li><span>1</span><div><strong>Build the plugin</strong><small>构建插件</small></div></li>
+                <li><span>2</span><div><strong>Copy main.js, manifest.json, styles.css</strong><small>复制三个发布文件</small></div></li>
+                <li><span>3</span><div><strong>Enable it in Community plugins</strong><small>在社区插件中启用</small></div></li>
+              </ol>
+            </div>
+            <div class="install-destination"><span>DESTINATION</span><code>&lt;vault&gt;/.obsidian/plugins/toworkboard/</code></div>
+          </section>
         </div>
+
+        <footer class="tour-caption">
+          <span class="caption-index">01 / 04</span>
+          <p><strong>Meet the local-first dashboard.</strong><small>认识你的本地优先工作台。</small></p>
+          <span class="caption-progress"><i></i></span>
+        </footer>
       </section>
     </main>
+
+    <script src="../node_modules/gsap/dist/gsap.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
-
