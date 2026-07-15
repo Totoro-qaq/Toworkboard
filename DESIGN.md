@@ -6,7 +6,9 @@ An editorial forest field guide inside Obsidian: strong reading hierarchy, quiet
 
 ## Signature element
 
-The **Canopy rail** is a thin vertical line connecting four small nodes: Notes, Mail, Tasks, and Signals. It is paired with an original letter **T** built from a canopy bar and a tree-trunk stem. It must not resemble or depict the animated Totoro character.
+The **TWB Junction** is an original ligature: a canopy-shaped T joins a routed workflow W, then closes with a board-shaped B. A rain-colored square node marks the handoff. It stays legible as a standalone 256 × 256 SVG and replaces the former literal stacked T/W construction in public brand material.
+
+The **Canopy rail** remains the motion companion: a thin vertical line connecting four small nodes for Notes, Mail, Tasks, and Signals. Neither element may resemble or depict the animated Totoro character.
 
 ## Color tokens
 
@@ -55,7 +57,7 @@ Do not use gradients. Color supports hierarchy; it does not decorate empty space
 
 ### Header
 
-Product name, one-line purpose, date/time, and the original Canopy T mark. A user-supplied mascot image may replace the mark locally, but no mascot asset ships with the plugin.
+Product name, one-line purpose, date/time, and the original TWB Junction mark. A user-supplied mascot image may replace the mark locally, but no mascot asset ships with the plugin.
 
 ### Search
 
@@ -86,5 +88,4 @@ Use only short opacity/position transitions for state changes. Disable nonessent
 
 ## Brand and legal boundary
 
-The author identity is **Totoro**. The project name, Canopy T mark, Canopy rail, screenshots, fixtures, and code are original. Do not bundle, trace, redraw, or imply endorsement by Studio Ghibli. A local custom-image setting is user-controlled and excluded from releases.
-
+The author identity is **Totoro**. The project name, TWB Junction mark, Canopy rail, screenshots, fixtures, and code are original. Do not bundle, trace, redraw, or imply endorsement by Studio Ghibli. A local custom-image setting is user-controlled and excluded from releases.

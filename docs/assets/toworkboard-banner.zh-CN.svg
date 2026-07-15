@@ -1,23 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" lang="zh-CN" viewBox="0 0 1440 520" role="img" aria-labelledby="title desc">
   <title id="title">Toworkboard</title>
-  <desc id="desc">Toworkboard 的 T/W Canopy 原创标识，以及连接笔记、任务、只读邮箱和工程信号的本地工作看板。</desc>
+  <desc id="desc">Toworkboard 原创 TWB Junction 标识，以及连接笔记、任务、只读邮箱和工程信号的本地工作看板。</desc>
+  <style>
+    .display { font-family: "Aptos Display", "PingFang SC", "Microsoft YaHei", "Segoe UI Variable Display", sans-serif; }
+    .body { font-family: "Aptos", "PingFang SC", "Microsoft YaHei", "Segoe UI Variable", sans-serif; }
+    .utility { font-family: "Cascadia Code", "SFMono-Regular", Consolas, monospace; }
+  </style>
   <rect width="1440" height="520" fill="#F3F5F3"/>
   <path d="M0 72H1440M0 448H1440" stroke="#D6DDD6"/>
 
   <g transform="translate(68 78)">
-    <g aria-label="Toworkboard 原创 T/W Canopy 标识">
-      <path d="M22 76L54 150L91 103L128 150L160 76" fill="none" stroke="#4E7D5B" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-      <rect x="8" y="8" width="166" height="38" rx="19" fill="#183C2B"/>
-      <rect x="75" y="38" width="32" height="104" rx="7" fill="#183C2B"/>
-      <circle cx="22" cy="76" r="7" fill="#F3F5F3" stroke="#4E7D5B" stroke-width="4"/>
-      <circle cx="160" cy="76" r="7" fill="#F3F5F3" stroke="#4E7D5B" stroke-width="4"/>
+    <g aria-label="Toworkboard 原创 TWB Junction 标识" transform="scale(.72)">
+      <path d="M8 18H88V46H60V166H34V46H8Z" fill="#183C2B"/>
+      <path d="M60 64H86L100 128L118 84H140L158 128L172 64H198L173 166H148L129 121L110 166H85Z" fill="#4E7D5B"/>
+      <path d="M180 30V166M180 42H209C227 42 237 51 237 66C237 82 226 92 207 92H180M180 92H212C232 92 243 103 243 122C243 141 230 152 208 152H180" fill="none" stroke="#183C2B" stroke-width="22" stroke-linejoin="round"/>
+      <rect x="174" y="58" width="12" height="12" rx="3" fill="#7FA0A0"/>
     </g>
 
-    <g transform="translate(0 214)" font-family="Inter, PingFang SC, Microsoft YaHei, ui-sans-serif, system-ui, sans-serif">
+    <g transform="translate(0 214)" class="display">
       <text fill="#17201A" font-size="58" font-weight="800" letter-spacing="-2">TOWORK</text>
       <text x="252" fill="#4E7D5B" font-size="58" font-weight="800" letter-spacing="-2">BOARD</text>
       <text y="48" fill="#59655D" font-size="17">把本地上下文变成今天的行动。</text>
-      <g transform="translate(0 82)" font-size="11" font-weight="700">
+      <g transform="translate(0 82)" class="utility" font-size="11" font-weight="700">
         <text fill="#183C2B">本地优先</text>
         <circle cx="67" cy="-4" r="3" fill="#7FA0A0"/>
         <text x="81" fill="#59655D">邮箱只读</text>
@@ -27,7 +31,7 @@
     </g>
   </g>
 
-  <g transform="translate(610 48)" font-family="Inter, PingFang SC, Microsoft YaHei, ui-sans-serif, system-ui, sans-serif">
+  <g transform="translate(610 48)" class="body">
     <rect width="760" height="424" rx="14" fill="#FBFCFA" stroke="#D6DDD6" stroke-width="2"/>
     <g transform="translate(28 26)">
       <text fill="#59655D" font-size="10" font-weight="700" letter-spacing="1.2">今天 · 本地工作看板</text>
@@ -43,7 +47,7 @@
         <path d="M22 25l5 5" stroke="#4E7D5B" stroke-width="2" stroke-linecap="round"/>
         <text x="39" y="26" fill="#59655D" font-size="12">搜索标题、路径、标签与笔记正文…</text>
         <rect x="650" y="11" width="36" height="22" rx="5" fill="#FBFCFA" stroke="#D6DDD6"/>
-        <text x="668" y="26" text-anchor="middle" fill="#59655D" font-size="9" font-family="ui-monospace, monospace">⌘ K</text>
+        <text x="668" y="26" text-anchor="middle" fill="#59655D" font-size="9" class="utility">⌘ K</text>
       </g>
 
       <g transform="translate(0 111)">
@@ -53,7 +57,7 @@
 
         <g transform="translate(0 23)">
           <rect y="14" width="5" height="33" rx="2.5" fill="#183C2B"/>
-          <text x="20" y="25" fill="#4E7D5B" font-size="9" font-weight="800" font-family="ui-monospace, monospace">笔记</text>
+          <text x="20" y="25" fill="#4E7D5B" font-size="9" font-weight="800" class="utility">笔记</text>
           <text x="102" y="25" fill="#17201A" font-size="13" font-weight="700">API 容灾与韧性设计</text>
           <text x="102" y="43" fill="#59655D" font-size="10">架构 / 可靠性 · 18 分钟前编辑</text>
           <text x="680" y="34" text-anchor="end" fill="#183C2B" font-size="10" font-weight="700">打开 →</text>
@@ -61,7 +65,7 @@
 
         <g transform="translate(0 85)">
           <rect y="14" width="5" height="33" rx="2.5" fill="#4E7D5B"/>
-          <text x="20" y="25" fill="#4E7D5B" font-size="9" font-weight="800" font-family="ui-monospace, monospace">任务</text>
+          <text x="20" y="25" fill="#4E7D5B" font-size="9" font-weight="800" class="utility">任务</text>
           <text x="102" y="25" fill="#17201A" font-size="13" font-weight="700">起草重试与限流策略</text>
           <text x="102" y="43" fill="#59655D" font-size="10">关联：API 容灾与韧性设计</text>
           <text x="680" y="34" text-anchor="end" fill="#183C2B" font-size="10" font-weight="700">今天</text>
@@ -69,7 +73,7 @@
 
         <g transform="translate(0 147)">
           <rect y="14" width="5" height="33" rx="2.5" fill="#7FA0A0"/>
-          <text x="20" y="25" fill="#4E7D5B" font-size="9" font-weight="800" font-family="ui-monospace, monospace">邮箱</text>
+          <text x="20" y="25" fill="#4E7D5B" font-size="9" font-weight="800" class="utility">邮箱</text>
           <text x="102" y="25" fill="#17201A" font-size="13" font-weight="700">架构评审已准备好</text>
           <text x="102" y="43" fill="#59655D" font-size="10">只读元数据 · 示例团队</text>
           <text x="680" y="34" text-anchor="end" fill="#183C2B" font-size="10" font-weight="700">1 封未读</text>
@@ -77,7 +81,7 @@
 
         <g transform="translate(0 209)">
           <rect y="14" width="5" height="33" rx="2.5" fill="#C66A3D"/>
-          <text x="20" y="25" fill="#4E7D5B" font-size="9" font-weight="800" font-family="ui-monospace, monospace">信号</text>
+          <text x="20" y="25" fill="#4E7D5B" font-size="9" font-weight="800" class="utility">信号</text>
           <text x="102" y="25" fill="#17201A" font-size="13" font-weight="700">Spring AI 发布说明</text>
           <text x="102" y="43" fill="#59655D" font-size="10">GitHub / spring-projects · 公开信号</text>
           <text x="680" y="34" text-anchor="end" fill="#183C2B" font-size="10" font-weight="700">查看</text>
