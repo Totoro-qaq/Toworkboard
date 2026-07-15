@@ -1,4 +1,4 @@
-# Forest Agent Dashboard
+# Toworkboard
 
 ## Product register
 
@@ -18,7 +18,7 @@ Turn a personal vault into a local-first operational cockpit: search what was wr
 
 ## Positioning
 
-Forest Agent Dashboard combines:
+Toworkboard combines:
 
 - full-text local note search;
 - frequent-note history stored in plugin data;

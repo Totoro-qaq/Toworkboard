@@ -2,14 +2,15 @@
 const { ItemView, Notice, Plugin, PluginSettingTab, Setting, requestUrl } = require("obsidian");
 const { gsap } = require("gsap");
 
-const VIEW_TYPE = "forest-agent-dashboard-view";
+const VIEW_TYPE = "toworkboard-view";
 const GITHUB_CACHE_KEYS = ["daily", "weekly"];
 const GMAIL_METADATA_SCOPE = "https://www.googleapis.com/auth/gmail.metadata";
 const GMAIL_TOKEN_URL = "https://oauth2.googleapis.com/token";
 const GMAIL_API_BASE = "https://gmail.googleapis.com/gmail/v1/users/me";
 const MAIL_PAGE_SIZE = 10;
 const MAIL_MAX_ITEMS = 50;
-const KEYCHAIN_SERVICE = "Obsidian Forest Agent Dashboard";
+const KEYCHAIN_SERVICE = "Obsidian Toworkboard";
+const LEGACY_KEYCHAIN_SERVICE = "Obsidian Forest Agent Dashboard";
 const BLOCKED_REPO_TERMS = [
   "bitcoin-recovery",
   "brute-force-tool",
@@ -301,20 +302,20 @@ async function storeKeychainSecret(account, value) {
   ]);
 }
 
-function readKeychainSecret(account) {
+function readKeychainSecret(account, service = KEYCHAIN_SERVICE) {
   return runKeychainCommand([
     "find-generic-password",
     "-a", account,
-    "-s", KEYCHAIN_SERVICE,
+    "-s", service,
     "-w",
   ]);
 }
 
-function deleteKeychainSecret(account) {
+function deleteKeychainSecret(account, service = KEYCHAIN_SERVICE) {
   return runKeychainCommand([
     "delete-generic-password",
     "-a", account,
-    "-s", KEYCHAIN_SERVICE,
+    "-s", service,
   ], null, true);
 }
 
@@ -1051,7 +1052,7 @@ class DashboardView extends ItemView {
   }
 
   getDisplayText() {
-    return "Forest Agent Dashboard";
+    return "Toworkboard";
   }
 
   getIcon() {
@@ -1067,7 +1068,7 @@ class DashboardView extends ItemView {
 
     root.empty();
     root.addClass("agent-dashboard");
-    root.setAttr("aria-label", "Forest Agent Dashboard");
+    root.setAttr("aria-label", "Toworkboard");
     this.rootEl = root;
     const shell = root.createDiv({ cls: "ad-shell" });
 
@@ -1202,7 +1203,7 @@ class DashboardView extends ItemView {
     const copy = header.createDiv({ cls: "ad-title-container" });
 
     this.dateEl = copy.createEl("p", { text: "", cls: "ad-subtitle" });
-    copy.createEl("h1", { text: "FOREST AGENT DASHBOARD", cls: "ad-title" });
+    copy.createEl("h1", { text: "TOWORKBOARD", cls: "ad-title" });
     copy.createEl("p", {
       text: "Notes, tasks and messages meet here. Find what matters now, then move into the day.",
       cls: "ad-title-note",
@@ -1215,11 +1216,11 @@ class DashboardView extends ItemView {
   }
 
   renderBrandMark(parent) {
-    const card = parent.createDiv({ cls: "ad-mascot-card", attr: { "aria-label": "Forest dashboard brand" } });
+    const card = parent.createDiv({ cls: "ad-mascot-card", attr: { "aria-label": "Toworkboard brand" } });
     if (this.getMascotImagePath()) {
       this.createMascotImage(card, "ad-mascot-img", "User-supplied dashboard mascot");
     } else {
-      this.createForestMark(card);
+      this.createCanopyMark(card);
     }
     card.createDiv({ text: "by Totoro", cls: "ad-mascot-caption" });
   }
@@ -1231,15 +1232,15 @@ class DashboardView extends ItemView {
       "ad-mascot-float ad-mascot-peek-bottom",
     ].forEach((className) => {
       const wrapper = root.createDiv({ cls: className, attr: { "aria-hidden": "true" } });
-      this.createForestMark(wrapper, true);
+      this.createCanopyMark(wrapper, true);
     });
   }
 
-  createForestMark(parent, compact = false) {
-    const mark = parent.createDiv({ cls: `ad-forest-mark${compact ? " is-compact" : ""}`, attr: { "aria-hidden": "true" } });
-    const letter = mark.createDiv({ cls: "ad-forest-letter" });
-    letter.createSpan({ cls: "ad-forest-canopy" });
-    letter.createSpan({ cls: "ad-forest-trunk" });
+  createCanopyMark(parent, compact = false) {
+    const mark = parent.createDiv({ cls: `ad-towork-mark${compact ? " is-compact" : ""}`, attr: { "aria-hidden": "true" } });
+    const letter = mark.createDiv({ cls: "ad-towork-letter" });
+    letter.createSpan({ cls: "ad-towork-canopy" });
+    letter.createSpan({ cls: "ad-towork-trunk" });
     const rail = mark.createDiv({ cls: "ad-canopy-rail" });
     [0, 1, 2, 3].forEach(() => rail.createSpan({ cls: "ad-canopy-node" }));
     return mark;
@@ -1255,7 +1256,7 @@ class DashboardView extends ItemView {
       },
     });
     const fallback = parent.createDiv({ cls: "ad-mascot-missing" });
-    this.createForestMark(fallback);
+    this.createCanopyMark(fallback);
 
     fallback.hide();
     image.onerror = () => {
@@ -1618,7 +1619,7 @@ class DashboardView extends ItemView {
             return;
           }
 
-          console.error("Forest Agent Dashboard note search failed", error);
+          console.error("Toworkboard note search failed", error);
           results.empty();
           results.createDiv({ text: "Search is temporarily unavailable. Try again.", cls: "ad-search-status ad-error-text" });
         }
@@ -1774,7 +1775,7 @@ class DashboardView extends ItemView {
     const copy = top.createDiv({ cls: "ad-mail-provider-copy" });
     copy.createDiv({ text: provider.name, cls: "ad-mail-provider-name" });
     copy.createDiv({
-      text: (provider.state.data && provider.state.data.address) || provider.address || "Add your address in Forest Dashboard settings",
+      text: (provider.state.data && provider.state.data.address) || provider.address || "Add your address in Toworkboard settings",
       cls: `ad-mail-address${provider.address ? "" : " is-empty"}`,
     });
 
@@ -2025,7 +2026,7 @@ class DashboardView extends ItemView {
 
   async connectGmailFromDashboard() {
     if (!this.plugin.settings.gmailClientId) {
-      new Notice("Add a Google Desktop OAuth client ID in Forest Dashboard settings first.");
+      new Notice("Add a Google Desktop OAuth client ID in Toworkboard settings first.");
       this.openDashboardSettings();
       return;
     }
@@ -2054,7 +2055,7 @@ class DashboardView extends ItemView {
 
   openDashboardSettings() {
     if (!this.app.setting) {
-      new Notice("Open Settings → Community plugins → Forest Agent Dashboard.");
+      new Notice("Open Settings → Community plugins → Toworkboard.");
       return;
     }
 
@@ -2120,7 +2121,7 @@ class DashboardView extends ItemView {
               try {
                 return await this.buildSearchIndexEntry(file);
               } catch (error) {
-                console.warn(`Forest Agent Dashboard could not index ${file.path}`, error);
+                console.warn(`Toworkboard could not index ${file.path}`, error);
                 return null;
               }
             }),
@@ -2162,7 +2163,7 @@ class DashboardView extends ItemView {
         this.noteSearchIndex.set(file.path, entry);
       }
     } catch (error) {
-      console.warn(`Forest Agent Dashboard could not refresh search index for ${file.path}`, error);
+      console.warn(`Toworkboard could not refresh search index for ${file.path}`, error);
     }
   }
 
@@ -2486,7 +2487,7 @@ class DashboardView extends ItemView {
   async getGitHubHeaders() {
     const headers = {
       Accept: "application/vnd.github+json",
-      "User-Agent": "Obsidian-Forest-Agent-Dashboard",
+      "User-Agent": "Obsidian-Toworkboard",
     };
     let token = "";
     try {
@@ -2524,7 +2525,7 @@ class DashboardView extends ItemView {
       method: "GET",
       headers: {
         Accept: "text/html",
-        "User-Agent": "Obsidian-Forest-Agent-Dashboard",
+        "User-Agent": "Obsidian-Toworkboard",
       },
     });
 
@@ -2726,7 +2727,7 @@ class DashboardSettingTab extends PluginSettingTab {
 
     new Setting(containerEl)
       .setName("Custom mascot image")
-      .setDesc("Optional vault-relative image path. The public plugin ships only the original Forest T mark.")
+      .setDesc("Optional vault-relative image path. The public plugin ships only the original Canopy T mark.")
       .addText((text) => {
         text.setPlaceholder(DEFAULT_SETTINGS.mascotImagePath);
         text.setValue(this.plugin.settings.mascotImagePath || DEFAULT_SETTINGS.mascotImagePath);
@@ -2982,14 +2983,14 @@ class DashboardSettingTab extends PluginSettingTab {
   }
 }
 
-export default class ForestAgentDashboardPlugin extends Plugin {
+export default class ToworkboardPlugin extends Plugin {
   async onload() {
     await this.loadSettings();
     await this.migrateCredentialStorage();
     this.lastRecordedOpen = new Map();
     this.registerView(VIEW_TYPE, (leaf) => new DashboardView(leaf, this));
     this.addSettingTab(new DashboardSettingTab(this.app, this));
-    this.addRibbonIcon("bot", "Open Forest Agent Dashboard", () => this.activateView());
+    this.addRibbonIcon("bot", "Open Toworkboard", () => this.activateView());
     this.addCommand({
       id: "open-dashboard",
       name: "Open dashboard",
@@ -3198,6 +3199,10 @@ export default class ForestAgentDashboardPlugin extends Plugin {
   }
 
   getSecretStorageId(kind) {
+    return `toworkboard-${this.getKeychainAccount(kind).replace(":", "-")}`;
+  }
+
+  getLegacySecretStorageId(kind) {
     return `forest-agent-dashboard-${this.getKeychainAccount(kind).replace(":", "-")}`;
   }
 
@@ -3236,13 +3241,23 @@ export default class ForestAgentDashboardPlugin extends Plugin {
     for (const credential of credentials) {
       if (!this.settings[credential.marker]) continue;
       const storageId = this.getSecretStorageId(credential.kind);
+      const legacyStorageId = this.getLegacySecretStorageId(credential.kind);
       let value = storage.getSecret(storageId);
+
+      if (!value) {
+        value = storage.getSecret(legacyStorageId);
+        if (value) storage.setSecret(legacyStorageId, "");
+      }
 
       if (!value) {
         try {
           value = await readKeychainSecret(this.getKeychainAccount(credential.kind));
         } catch (_error) {
-          value = "";
+          try {
+            value = await readKeychainSecret(this.getKeychainAccount(credential.kind), LEGACY_KEYCHAIN_SERVICE);
+          } catch (_legacyError) {
+            value = "";
+          }
         }
       }
 
@@ -3270,6 +3285,7 @@ export default class ForestAgentDashboardPlugin extends Plugin {
 
       try {
         await deleteKeychainSecret(this.getKeychainAccount(credential.kind));
+        await deleteKeychainSecret(this.getKeychainAccount(credential.kind), LEGACY_KEYCHAIN_SERVICE);
       } catch (_error) {
         // Migration is already complete in Obsidian storage; stale legacy data is harmless.
       }
@@ -3299,7 +3315,14 @@ export default class ForestAgentDashboardPlugin extends Plugin {
       return await readKeychainSecret(this.getKeychainAccount(kind));
     } catch (error) {
       if (/could not be found/i.test(String(error && error.message))) {
-        throw new Error("The saved credential is missing from macOS Keychain. Add it again in settings.");
+        try {
+          const legacyValue = await readKeychainSecret(this.getKeychainAccount(kind), LEGACY_KEYCHAIN_SERVICE);
+          await storeKeychainSecret(this.getKeychainAccount(kind), legacyValue);
+          await deleteKeychainSecret(this.getKeychainAccount(kind), LEGACY_KEYCHAIN_SERVICE);
+          return legacyValue;
+        } catch (_legacyError) {
+          throw new Error("The saved credential is missing from macOS Keychain. Add it again in settings.");
+        }
       }
       throw error;
     }
@@ -3307,8 +3330,12 @@ export default class ForestAgentDashboardPlugin extends Plugin {
 
   async deleteCredential(kind) {
     const storage = this.getNativeSecretStorage();
-    if (storage) storage.setSecret(this.getSecretStorageId(kind), "");
+    if (storage) {
+      storage.setSecret(this.getSecretStorageId(kind), "");
+      storage.setSecret(this.getLegacySecretStorageId(kind), "");
+    }
     await deleteKeychainSecret(this.getKeychainAccount(kind));
+    await deleteKeychainSecret(this.getKeychainAccount(kind), LEGACY_KEYCHAIN_SERVICE);
   }
 
   async saveGitHubToken(value) {
@@ -3364,7 +3391,7 @@ export default class ForestAgentDashboardPlugin extends Plugin {
   async connectGmail() {
     const clientId = String(this.settings.gmailClientId || "").trim();
     if (!clientId) {
-      throw new Error("Add a Google Desktop OAuth client ID in Forest Dashboard settings first.");
+      throw new Error("Add a Google Desktop OAuth client ID in Toworkboard settings first.");
     }
 
     const clientSecret = await this.getGmailClientSecret();

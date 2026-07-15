@@ -1,53 +1,53 @@
 .theme-light,
 .theme-dark {
-  --fad-canvas: #f3f5f3;
-  --fad-surface: #fbfcfa;
-  --fad-ink: #17201a;
-  --fad-muted: #667069;
-  --fad-canopy: #183c2b;
-  --fad-fern: #4e7d5b;
-  --fad-rain: #7fa0a0;
-  --fad-persimmon: #c66a3d;
-  --fad-line: #d6ddd6;
-  --ad-bg-primary: var(--fad-canvas);
+  --twb-canvas: #f3f5f3;
+  --twb-surface: #fbfcfa;
+  --twb-ink: #17201a;
+  --twb-muted: #667069;
+  --twb-canopy: #183c2b;
+  --twb-fern: #4e7d5b;
+  --twb-rain: #7fa0a0;
+  --twb-persimmon: #c66a3d;
+  --twb-line: #d6ddd6;
+  --ad-bg-primary: var(--twb-canvas);
   --ad-bg-secondary: #e9eee9;
-  --ad-bg-raised: var(--fad-surface);
-  --ad-border: var(--fad-line);
-  --ad-text-primary: var(--fad-ink);
+  --ad-bg-raised: var(--twb-surface);
+  --ad-border: var(--twb-line);
+  --ad-text-primary: var(--twb-ink);
   --ad-text-secondary: #465149;
-  --ad-text-muted: var(--fad-muted);
-  --ad-accent: var(--fad-fern);
-  --ad-accent-strong: var(--fad-canopy);
+  --ad-text-muted: var(--twb-muted);
+  --ad-accent: var(--twb-fern);
+  --ad-accent-strong: var(--twb-canopy);
   --ad-accent-soft: #dfeadf;
-  --ad-warm: var(--fad-persimmon);
+  --ad-warm: var(--twb-persimmon);
   --ad-error: #a44732;
-  --ad-ring: color-mix(in srgb, var(--fad-fern) 58%, transparent);
+  --ad-ring: color-mix(in srgb, var(--twb-fern) 58%, transparent);
   --ad-shadow: 0 10px 24px -20px rgb(23 32 26 / 45%);
 }
 
 .theme-dark {
-  --fad-canvas: #111713;
-  --fad-surface: #18211b;
-  --fad-ink: #eef3ef;
-  --fad-muted: #a9b4ac;
-  --fad-canopy: #b7d4be;
-  --fad-fern: #78a486;
-  --fad-rain: #8fafb1;
-  --fad-persimmon: #e08a61;
-  --fad-line: #344039;
-  --ad-bg-primary: var(--fad-canvas);
+  --twb-canvas: #111713;
+  --twb-surface: #18211b;
+  --twb-ink: #eef3ef;
+  --twb-muted: #a9b4ac;
+  --twb-canopy: #b7d4be;
+  --twb-fern: #78a486;
+  --twb-rain: #8fafb1;
+  --twb-persimmon: #e08a61;
+  --twb-line: #344039;
+  --ad-bg-primary: var(--twb-canvas);
   --ad-bg-secondary: #202a23;
-  --ad-bg-raised: var(--fad-surface);
-  --ad-border: var(--fad-line);
-  --ad-text-primary: var(--fad-ink);
+  --ad-bg-raised: var(--twb-surface);
+  --ad-border: var(--twb-line);
+  --ad-text-primary: var(--twb-ink);
   --ad-text-secondary: #c6d0c8;
-  --ad-text-muted: var(--fad-muted);
-  --ad-accent: var(--fad-fern);
-  --ad-accent-strong: var(--fad-canopy);
+  --ad-text-muted: var(--twb-muted);
+  --ad-accent: var(--twb-fern);
+  --ad-accent-strong: var(--twb-canopy);
   --ad-accent-soft: #263a2c;
-  --ad-warm: var(--fad-persimmon);
+  --ad-warm: var(--twb-persimmon);
   --ad-error: #ef957f;
-  --ad-ring: color-mix(in srgb, var(--fad-fern) 68%, transparent);
+  --ad-ring: color-mix(in srgb, var(--twb-fern) 68%, transparent);
   --ad-shadow: 0 12px 28px -20px rgb(0 0 0 / 75%);
 }
 
@@ -205,7 +205,7 @@
   text-align: center;
 }
 
-.ad-forest-mark {
+.ad-towork-mark {
   display: grid;
   grid-template-columns: 64px 12px;
   gap: 10px;
@@ -215,31 +215,31 @@
   color: var(--ad-accent-strong);
 }
 
-.ad-forest-mark.is-compact {
+.ad-towork-mark.is-compact {
   grid-template-columns: 44px 9px;
   gap: 7px;
   min-height: 100%;
 }
 
-.ad-forest-letter {
+.ad-towork-letter {
   position: relative;
   width: 64px;
   height: 66px;
 }
 
-.ad-forest-mark.is-compact .ad-forest-letter {
+.ad-towork-mark.is-compact .ad-towork-letter {
   width: 44px;
   height: 46px;
 }
 
-.ad-forest-canopy,
-.ad-forest-trunk {
+.ad-towork-canopy,
+.ad-towork-trunk {
   position: absolute;
   display: block;
   background: currentColor;
 }
 
-.ad-forest-canopy {
+.ad-towork-canopy {
   top: 4px;
   left: 4px;
   width: calc(100% - 8px);
@@ -247,7 +247,7 @@
   border-radius: 15px 15px 5px 5px;
 }
 
-.ad-forest-trunk {
+.ad-towork-trunk {
   top: 15px;
   left: calc(50% - 8px);
   width: 16px;
@@ -255,11 +255,11 @@
   border-radius: 3px 3px 10px 10px;
 }
 
-.ad-forest-mark.is-compact .ad-forest-canopy {
+.ad-towork-mark.is-compact .ad-towork-canopy {
   height: 10px;
 }
 
-.ad-forest-mark.is-compact .ad-forest-trunk {
+.ad-towork-mark.is-compact .ad-towork-trunk {
   top: 10px;
   left: calc(50% - 5px);
   width: 10px;

@@ -1,6 +1,6 @@
 # Code of conduct
 
-Forest Agent Dashboard adopts the [Contributor Covenant 2.1](https://www.contributor-covenant.org/version/2/1/code_of_conduct/) as its community standard.
+Toworkboard adopts the [Contributor Covenant 2.1](https://www.contributor-covenant.org/version/2/1/code_of_conduct/) as its community standard.
 
 ## Our standards
 
@@ -14,7 +14,7 @@ This standard applies to repository issues, pull requests, discussions, reviews,
 
 ## Enforcement
 
-Report sensitive conduct privately through [GitHub private vulnerability reporting](https://github.com/Totoro-qaq/forest-agent-dashboard/security/advisories/new). Reports will be reviewed fairly and kept confidential where possible. Maintainers may edit or remove contributions and may temporarily or permanently restrict participation.
+Report sensitive conduct privately through [GitHub private vulnerability reporting](https://github.com/Totoro-qaq/toworkboard/security/advisories/new). Reports will be reviewed fairly and kept confidential where possible. Maintainers may edit or remove contributions and may temporarily or permanently restrict participation.
 
 This project follows the Contributor Covenant enforcement ladder and attribution requirements. The Contributor Covenant is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 

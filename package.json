@@ -1,7 +1,7 @@
 {
-	"name": "forest-agent-dashboard",
-	"version": "0.1.0",
-	"description": "A local-first Obsidian dashboard for notes, tasks, mail summaries, and engineering signals.",
+	"name": "toworkboard",
+	"version": "0.2.0",
+	"description": "A local-first Obsidian workboard for notes, tasks, read-only mail summaries, and engineering signals.",
 	"main": "main.js",
 	"type": "module",
 	"scripts": {
