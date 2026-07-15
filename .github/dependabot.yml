@@ -8,6 +8,9 @@ updates:
       time: "02:00"
       timezone: Asia/Shanghai
     open-pull-requests-limit: 5
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
     groups:
       development-tooling:
         dependency-type: development
@@ -16,4 +19,6 @@ updates:
     directory: /
     schedule:
       interval: monthly
-
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
