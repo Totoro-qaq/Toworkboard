@@ -16,6 +16,8 @@
 
 由 **Totoro** 开发的 Obsidian 本地优先桌面工作台。它把笔记搜索、常用笔记、小任务、只读邮箱摘要和可选的工程信号放进一个安静、紧凑的 Dashboard。
 
+[安装](#安装) · [如何使用](#如何使用) · [可选集成](#可选集成) · [隐私与安全](#隐私与安全)
+
 > **早期公开预览：** 请手动安装，并在连接邮箱前阅读隐私说明。目前尚未进入 Obsidian 社区插件市场。
 
 <p align="center">
@@ -24,15 +26,17 @@
 
 演示中的笔记和账号均为合成数据。GIF 依次展示四个真实流程：产品概览、知识库全文搜索、可选信号加载和本地安装。
 
-## 为什么做这个 Dashboard
+## 一个看板，五条工作回路
 
 上下文本来就存放在 Obsidian 里。Toworkboard 为这些上下文提供一个可以行动的界面，同时不要求你把知识库迁移到托管服务。
 
-- **查找：** 在本地搜索 Markdown 标题、路径、标签和正文。
-- **返回：** 根据本地打开历史排列常用笔记。
-- **行动：** 在相关笔记旁维护轻量任务。
-- **查看：** 浏览只读的 Gmail 与 QQ 邮箱元数据。
-- **关注：** 按需查看 GitHub 项目和 Hacker News 工程资讯。
+| 界面 | 能做什么 | 边界 |
+| --- | --- | --- |
+| 搜索 | 查找标题、路径、标签和 Markdown 正文。 | 仅本地知识库 |
+| 常用笔记 | 按本地打开历史返回高频笔记。 | 本地插件数据 |
+| 任务 | 在上下文旁维护小型行动项。 | 不修改笔记 |
+| Mailroom | 查看 Gmail 与 QQ Mail 的邮件头、未读和最近分页。 | 只读、按需接入 |
+| Signals | 关注 GitHub 项目与 Hacker News 文章。 | 公开或 Token 辅助、按需接入 |
 
 笔记、搜索与任务功能可以离线使用；所有网络集成都需要明确配置，并且可以不启用。
 
@@ -74,7 +78,7 @@ npm run verify
 
 ### 打开 Dashboard
 
-- 点击左侧 Ribbon 中的森林图标；或者
+- 点击左侧 Ribbon 中的 Toworkboard 标识；或者
 - 在命令面板执行 **Toworkboard: Open dashboard**。
 
 ### 搜索笔记
@@ -157,7 +161,11 @@ npm run build
 
 ## 视觉身份与致谢
 
-Canopy T 和 Canopy rail 是本项目的原创标识。公开插件不会包含、临摹或重绘 Studio Ghibli 的角色或作品。“Totoro”是作者身份，并不表示存在官方关联或背书。
+<p align="center">
+  <img src="docs/assets/toworkboard-mark.svg" alt="Toworkboard TWB Junction 原创标识" width="112">
+</p>
+
+**TWB Junction** 是原创连字标识：深色树冠 T 接入蕨绿色的工作流 W，再由看板形态的 B 收口；雨色节点标记三者交接。它与加载状态中的 Canopy rail 配套使用。公开插件不会包含、临摹或重绘 Studio Ghibli 的角色或作品。“Totoro”是作者身份，并不表示存在官方关联或背书。
 
 把 Obsidian 知识库作为 Agent Dashboard 的构想在概念上受到 [Jason Zhou 的 Obsidian Agent Dashboard 文章](https://jasonai.me/blog/codex-obsidian-agent-dashboard-plugin/)启发。本仓库是独立实现，代码、文案、演示数据与视觉身份均为原创。
 

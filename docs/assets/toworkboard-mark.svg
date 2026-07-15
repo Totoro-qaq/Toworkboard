@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Toworkboard TWB Junction mark</title>
+  <desc id="desc">An original TWB ligature: a canopy T joins a fern-green workflow W and closes with a board-shaped B.</desc>
+  <rect width="256" height="256" rx="28" fill="#F3F5F3"/>
+  <path d="M28 218H228" stroke="#D6DDD6"/>
+  <g transform="translate(0 36)">
+    <path d="M8 18H88V46H60V166H34V46H8Z" fill="#183C2B"/>
+    <path d="M60 64H86L100 128L118 84H140L158 128L172 64H198L173 166H148L129 121L110 166H85Z" fill="#4E7D5B"/>
+    <path d="M180 30V166M180 42H209C227 42 237 51 237 66C237 82 226 92 207 92H180M180 92H212C232 92 243 103 243 122C243 141 230 152 208 152H180" fill="none" stroke="#183C2B" stroke-width="22" stroke-linejoin="round"/>
+    <rect x="174" y="58" width="12" height="12" rx="3" fill="#7FA0A0"/>
+  </g>
+</svg>

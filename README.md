@@ -16,6 +16,8 @@
 
 A local-first desktop workspace for Obsidian by **Totoro**. It brings note search, frequent notes, small tasks, read-only mail summaries, and optional engineering signals into one calm dashboard.
 
+[Install](#install) · [Use it](#use-it) · [Optional integrations](#optional-integrations) · [Privacy](#privacy-and-security)
+
 > **Early public preview:** install it manually and review the privacy notes before connecting mail. It is not in the Obsidian Community Plugins catalog yet.
 
 <p align="center">
@@ -24,15 +26,17 @@ A local-first desktop workspace for Obsidian by **Totoro**. It brings note searc
 
 The animated tour uses synthetic notes and accounts. It demonstrates four real workflows: product overview, full-text vault search, optional signal loading, and local installation.
 
-## Why this dashboard
+## One board, five working loops
 
 Obsidian already holds the context. Toworkboard gives that context an operational surface without moving the vault into a hosted service.
 
-- **Find:** search Markdown titles, paths, tags, and note content locally.
-- **Return:** rank frequently opened notes using local history.
-- **Act:** keep a lightweight task list beside the notes that informed it.
-- **Review:** glance at read-only Gmail and QQ Mail metadata.
-- **Notice:** optionally follow GitHub repositories and Hacker News stories.
+| Surface | What it helps you do | Boundary |
+| --- | --- | --- |
+| Search | Find titles, paths, tags, and Markdown content. | Local vault only |
+| Frequent notes | Return to notes ranked by local open history. | Local plugin data |
+| Tasks | Keep small working actions beside their context. | Does not modify notes |
+| Mailroom | Review Gmail and QQ Mail headers, unread, and recent pages. | Read-only, opt-in |
+| Signals | Follow GitHub repositories and Hacker News stories. | Public or token-assisted, opt-in |
 
 Core note, search, and task features work offline. Network integrations are explicit and optional.
 
@@ -74,7 +78,7 @@ Reload Obsidian and enable the plugin under **Settings → Community plugins**.
 
 ### Open the dashboard
 
-- Select the Toworkboard icon in the left ribbon; or
+- Select the Toworkboard mark in the left ribbon; or
 - run **Toworkboard: Open dashboard** from the command palette.
 
 ### Search notes
@@ -157,7 +161,11 @@ Project decisions are documented in [PRODUCT.md](PRODUCT.md), [DESIGN.md](DESIGN
 
 ## Visual identity and acknowledgement
 
-The Canopy T and Canopy rail are original project marks. The public plugin does **not** include, trace, or redraw any Studio Ghibli character or artwork. “Totoro” is the author identity, not a claim of affiliation or endorsement.
+<p align="center">
+  <img src="docs/assets/toworkboard-mark.svg" alt="Toworkboard TWB Junction mark" width="112">
+</p>
+
+The **TWB Junction** is an original ligature: a dark canopy T joins a fern-green workflow W and closes with a board-shaped B. A rain-colored node marks the handoff. It pairs with the Canopy rail used for loading states. The public plugin does **not** include, trace, or redraw any Studio Ghibli character or artwork. “Totoro” is the author identity, not a claim of affiliation or endorsement.
 
 The idea of treating an Obsidian vault as an agent-oriented dashboard was conceptually inspired by [Jason Zhou's Obsidian Agent Dashboard article](https://jasonai.me/blog/codex-obsidian-agent-dashboard-plugin/). This repository is an independent implementation with original code, copy, fixtures, and visual identity.
 
